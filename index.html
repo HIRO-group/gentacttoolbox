@@ -114,10 +114,12 @@
           
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <img src="static/images/cu_logo.png" style="height: 4em; vertical-align: middle;">
               <img src="static/images/hiro_logo.png" style="height: 4em; margin-left: 2em; vertical-align: middle;">
+              <img src="static/images/atlas_logo.png" style="height: 4em; margin-left: 2em; vertical-align: middle;">
+              <img src="static/images/cu_logo.png" style="height: 4em; vertical-align: middle;">
             </span>
           </div>
+
 
           <div class="column has-text-centered">
             <div class="publication-links">
@@ -140,8 +142,8 @@
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Video Link. ADD LATER! --> 
-              <!-- <span class="link-block">
+              <!-- Video Link. --> 
+              <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -149,7 +151,7 @@
                   </span>
                   <span>Video</span>
                 </a>
-              </span> -->
+              </span>
               <!-- Code Link. -->
               <span class="link-block">
                 <a href="https://github.com/cKohl10/GenTact"
@@ -286,13 +288,12 @@
     <!--/ Abstract. -->
 
     <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
+    <div class="container is-max-desktop content" style="margin-top: 3rem;">
+      <h2 class="title is-3 has-text-centered">Video</h2>
+      <div class="publication-video">
+        <video poster="" id="demo" autoplay controls muted loop playsinline width="100%">
+          <source src="./static/videos/supplement_video.mp4" type="video/mp4">
+        </video>
       </div>
     </div>
     <!--/ Paper video. -->
@@ -304,12 +305,12 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
-}</code></pre>
+    <pre><code>@article{kohlbrenner2024gentact,
+      title={GenTact Toolbox: A Computational Design Pipeline to Procedurally Generate Context-Driven 3D Printed Whole-Body Tactile Skins},
+      author={Kohlbrenner, Carson and Escobedo, Caleb and Bae, S Sandra and Dickhans, Alexander and Roncone, Alessandro},
+      journal={arXiv preprint arXiv:2412.00711},
+      year={2024}
+    }</code></pre>
   </div>
 </section>
 
@@ -334,11 +335,8 @@
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
           <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
+            Thank you <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> for providing the template for this website!
           </p>
         </div>
       </div>
