@@ -1,6 +1,6 @@
 # GenTact Toolbox Website
 
-This is the repository that contains source code for the [GenTact Toolbox website](https://ckohl10.github.io/gentact.github.io/).
+This is the repository that contains source code for the [GenTact Toolbox website](https://ckohl10.github.io/gentacttoolbox/).
 
 Click here for the source code of [GenTact](https://github.com/ckohl10/gentact).
 
