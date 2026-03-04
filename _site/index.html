@@ -1,6 +1,3 @@
----
-layout: null
----
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,11 +8,11 @@ layout: null
   <title>GenTact Toolbox</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
-  <link rel="stylesheet" href="{{ '/static/css/bulma.min.css' | relative_url }}">
+  <link rel="stylesheet" href="/static/css/bulma.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="{{ '/static/css/index.css' | relative_url }}">
-  <link rel="icon" href="{{ '/imgs/logos/hiro_icon.svg' | relative_url }}">
+  <link rel="stylesheet" href="/static/css/index.css">
+  <link rel="icon" href="/imgs/logos/hiro_icon.svg">
 
   <style>
     .paper-card {
@@ -159,7 +156,7 @@ layout: null
         tailored to both robot shape and application.
       </p>
       <div style="margin-top: 2rem;">
-        <a href="https://hiro-group.ronc.one/"><img src="{{ '/imgs/logos/hiro_logo.png' | relative_url }}" style="height: 5em; margin: 0 1em; vertical-align: middle;"></a>
+        <a href="https://hiro-group.ronc.one/"><img src="/imgs/logos/hiro_logo.png" style="height: 5em; margin: 0 1em; vertical-align: middle;"></a>
       </div>
     </div>
     <div class="container is-max-desktop" style="margin-top: 2.5rem;">
@@ -177,15 +174,15 @@ layout: null
   <div class="container">
     <h2 class="title is-3 has-text-centered" style="margin-bottom: 2rem;">Publications</h2>
     <div class="columns is-centered">
-      {% for publication in site.data.publications %}
+      
       <div class="column is-4">
-        <div class="paper-card" style="--card-color: {{ publication.color }};">
-          <a href="{{ publication.page_url | relative_url }}">
-            <img src="{{ publication.image_url | relative_url }}" alt="{{ publication.title }}" class="paper-image" style="object-fit: contain;">
+        <div class="paper-card" style="--card-color: #2853aa;">
+          <a href="/websites/icra2025/icra2025.html">
+            <img src="/imgs/cards/gentact_cover.png" alt="GenTact Toolbox: A Computational Design Pipeline" class="paper-image" style="object-fit: contain;">
             <div class="paper-content">
-              <div class="paper-title">{{ publication.title }}</div>
-              <div class="paper-venue">{{ publication.card_venue | default: publication.venue }}</div>
-              <p class="paper-blurb">{{ publication.description }}</p>
+              <div class="paper-title">GenTact Toolbox: A Computational Design Pipeline</div>
+              <div class="paper-venue">ICRA 2025</div>
+              <p class="paper-blurb">A computational pipeline for creating versatile whole-body tactile skins through procedural mesh generation, task-driven simulation, and multi-material 3D printing.</p>
               <div class="paper-cta">
                 Learn more <i class="fas fa-arrow-right"></i>
               </div>
@@ -193,7 +190,23 @@ layout: null
           </a>
         </div>
       </div>
-      {% endfor %}
+      
+      <div class="column is-4">
+        <div class="paper-card" style="--card-color: #8528aa;">
+          <a href="/websites/icra2026/icra2026.html">
+            <img src="/imgs/cards/gtp_cover2.png" alt="GenTact-Prox: Tactile and Proximity Sensing" class="paper-image" style="object-fit: contain;">
+            <div class="paper-content">
+              <div class="paper-title">GenTact-Prox: Tactile and Proximity Sensing</div>
+              <div class="paper-venue">ICRA 2026</div>
+              <p class="paper-blurb">Extends GenTact with capacitive sensing for proximity detection (up to 18 cm) and contact anticipation. Introduces a data-driven framework for mapping the proximal receptive field, enabling robots to perceive and respond to nearby objects before contact occurs.</p>
+              <div class="paper-cta">
+                Learn more <i class="fas fa-arrow-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      
     </div>
   </div>
 </section>
@@ -202,18 +215,53 @@ layout: null
   <div class="container">
     <h2 class="title is-3 has-text-centered">Contributors</h2>
     <div class="contributors-grid">
-      {% for person in site.data.people %}
+      
       <div class="contributor">
-        {% if person.url %}
-        <a class="contributor-photo-link" href="{{ person.url }}" target="_blank" rel="noopener noreferrer">
-          <img class="contributor-photo" src="{{ '/imgs/people/' | append: person.pic | relative_url }}" alt="{{ person.name }}">
+        
+        <a class="contributor-photo-link" href="https://ckohl10.github.io" target="_blank" rel="noopener noreferrer">
+          <img class="contributor-photo" src="/imgs/people/carson.png" alt="Carson Kohlbrenner">
         </a>
-        {% else %}
-        <img class="contributor-photo" src="{{ '/imgs/people/' | append: person.pic | relative_url }}" alt="{{ person.name }}">
-        {% endif %}
-        <div class="contributor-name">{{ person.name }}</div>
+        
+        <div class="contributor-name">Carson Kohlbrenner</div>
       </div>
-      {% endfor %}
+      
+      <div class="contributor">
+        
+        <img class="contributor-photo" src="/imgs/people/caleb.jpg" alt="Caleb Escobedo">
+        
+        <div class="contributor-name">Caleb Escobedo</div>
+      </div>
+      
+      <div class="contributor">
+        
+        <img class="contributor-photo" src="/imgs/people/anna_souk.png" alt="Anna Soukhovei">
+        
+        <div class="contributor-name">Anna Soukhovei</div>
+      </div>
+      
+      <div class="contributor">
+        
+        <img class="contributor-photo" src="/imgs/people/alex.jpg" alt="Alex Dickhans">
+        
+        <div class="contributor-name">Alex Dickhans</div>
+      </div>
+      
+      <div class="contributor">
+        
+        <img class="contributor-photo" src="/imgs/people/sandra.png" alt="Sandra Bae">
+        
+        <div class="contributor-name">Sandra Bae</div>
+      </div>
+      
+      <div class="contributor">
+        
+        <a class="contributor-photo-link" href="https://alessandro.ronc.one" target="_blank" rel="noopener noreferrer">
+          <img class="contributor-photo" src="/imgs/people/alecive.jpg" alt="Dr. Alessandro Roncone">
+        </a>
+        
+        <div class="contributor-name">Dr. Alessandro Roncone</div>
+      </div>
+      
     </div>
   </div>
 </section>
