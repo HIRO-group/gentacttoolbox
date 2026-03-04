@@ -1,0 +1,16 @@
+- title: "GenTact Toolbox: A Computational Design Pipeline"
+  description: "A computational pipeline for creating versatile whole-body tactile skins through procedural mesh generation, task-driven simulation, and multi-material 3D printing."
+  year: 2025
+  venue: "International Conference on Robotics and Automation [ICRA]"
+  card_venue: "ICRA 2025"
+  page_url: "/websites/icra2025/icra2025.html"
+  image_url: "imgs/cards/gentact_cover.png"
+  color: "#2853aa"
+- title: "GenTact-Prox: Tactile and Proximity Sensing"
+  description: "Extends GenTact with capacitive sensing for proximity detection (up to 18 cm) and contact anticipation. Introduces a data-driven framework for mapping the proximal receptive field, enabling robots to perceive and respond to nearby objects before contact occurs."
+  year: 2026
+  venue: "International Conference on Robotics and Automation [ICRA]"
+  card_venue: "ICRA 2026"
+  page_url: "/websites/icra2026/icra2026.html"
+  image_url: "imgs/cards/gtp_cover2.png"
+  color: "#8528aa"
