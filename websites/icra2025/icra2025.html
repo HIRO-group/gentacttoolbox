@@ -1,3 +1,6 @@
+---
+layout: null
+---
 <!DOCTYPE html>
 <html>
 <head>
@@ -25,28 +28,17 @@
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/index.js"></script>
 </head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-78M134WNH3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-78M134WNH3');
+</script>
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="../../index.html">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-    </div>
-
-  </div>
-</nav>
+{% include navbar.html %}
 
 
 <section class="hero">
@@ -54,7 +46,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title"><b style="color: #2853aa">GenTact Toolbox</b>: A Procedural Whole-Body Sensor Design Pipeline</h1>
+          <h1 class="title is-1 publication-title"><b style="color: var(--color-RC);">GenTact Toolbox</b>: A Procedural Whole-Body Sensor Design Pipeline</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
 
@@ -80,7 +72,8 @@
           
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <img src="../../imgs/logos/hiro_logo.png" style="height: 2em; margin-left: 2em; vertical-align: middle;">
+              <img src="../../imgs/logos/logo-long-white-text.svg" class="logo-dark" style="height: 2em; margin-left: 2em; vertical-align: middle;">
+              <img src="../../imgs/logos/hiro_logo.png" class="logo-light" style="height: 2em; margin-left: 2em; vertical-align: middle;">
               <img src="../../imgs/logos/atlas_logo.png" style="height: 2em; margin-left: 2em; vertical-align: middle;">
             </span>
           </div>
@@ -154,7 +147,7 @@
 
 </section>
 
-<section class="section" style="background-color: #f5f5f5;">
+<section class="section has-bg-alt">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
@@ -167,7 +160,7 @@
             modular, one-size-fits-all designs, which, while versatile, fail to
             account for the robot's specific shape and the unique demands
             of its operational context. In this work, we introduce the
-            <b style="color: #2853aa">GenTact Toolbox</b>, a computational pipeline for creating versatile
+            <b style="color: var(--color-RC);">GenTact Toolbox</b>, a computational pipeline for creating versatile
             whole-body tactile skins tailored to both robot shape and
             application domain. Our pipeline includes procedural mesh
             generation for conforming to a robot's topology, task-driven
