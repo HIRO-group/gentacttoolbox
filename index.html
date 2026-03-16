@@ -31,7 +31,8 @@ layout: null
 {% include navbar.html %}
 
 <section class="landing-hero" id="about">
-  <div class="container is-max-desktop">
+  <div class="landing-hero-bg"></div>
+  <div class="container is-max-desktop" style="position: relative; z-index: 1;">
     <div class="has-text-centered">
       <h1 class="title is-1"><b style="color: var(--color-RC);">GenTact Toolbox</b></h1>
       <h2 class="subtitle is-4" style="margin-top: 1rem;">A Procedural Whole-Body Sensor Design Pipeline</h2>
@@ -57,7 +58,7 @@ layout: null
   </div>
 </section>
 
-<section class="cards-section" id="publications">
+<section class="cards-section has-bg-alt" id="publications">
   <div class="container">
     <h2 class="title is-3 has-text-centered" style="margin-bottom: 1rem;">Publications</h2>
     <div class="modality-filters">

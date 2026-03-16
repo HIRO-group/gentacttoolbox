@@ -162,9 +162,22 @@ body {
 .landing-hero {
   background: radial-gradient(ellipse at 50% 40%, #262a34 0%, #1a1d23 70%);
   padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
 }
 [data-theme="light"] .landing-hero {
   background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ed 100%);
+}
+.landing-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('/imgs/bg/gtp_prox2.png');
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+  opacity: 0.05; /* adjust alpha here (0 = invisible, 1 = fully opaque) */
+  mix-blend-mode: screen; /* black pixels in image become transparent, preserving the gradient */
+  z-index: 0;
 }
 .hero-buttons {
   display: flex;
@@ -215,7 +228,13 @@ body {
 }
 
 /* --- Sections --- */
-.cards-section { padding: 4rem 0; }
+.cards-section {
+  padding: 2rem 0 4rem;
+  background-color: #272b33 !important;
+}
+[data-theme="light"] .cards-section {
+  background-color: #efefef !important;
+}
 .contributors-section { padding: 2rem 0 4rem; }
 
 /* --- Contributors --- */
