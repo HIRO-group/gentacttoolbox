@@ -1,32 +1,30 @@
  - name: Carson Kohlbrenner
-   role: phd
+   role: Maintainer
    url: https://ckohl10.github.io
    email: carson.kohlbrenner@colorado.edu
    pic: carson.png
 
  - name: Caleb Escobedo
-   role: phd
-   page: caleb
+   url: https://hiro-group.ronc.one/caleb.html
    email: caleb.escobedo@colorado.edu
    pic: caleb.jpg
 
  - name: Anna Soukhovei
-   role: undergrad
+   url: https://www.linkedin.com/in/anna-soukhovei-3b2b6a2a4/
    email: anna.soukhovei@colorado.edu
    pic: anna_souk.png
 
  - name: Alex Dickhans
-   role: highschool
+   url: https://alex.dickhans.net/
    email: adickhans@gmail.com
    pic: alex.jpg
 
  - name: Sandra Bae
-   role: collaborator
+   url: https://sandrabae.github.io/
    email: sandra.bae@colorado.edu
    pic: sandra.png
 
  - name: Dr. Alessandro Roncone
-   role: faculty
    url: https://alessandro.ronc.one
    office: ECES 124
    phone: +1 (303) 735-6233

@@ -1,3 +1,6 @@
+---
+layout: null
+---
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,39 +15,32 @@
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="../../imgs/logos/hiro_icon.svg">
+  <link rel="icon" href="../../imgs/logos/icon.png">
+  <link rel="apple-touch-icon" href="../../imgs/logos/icon.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/index.js"></script>
 </head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-78M134WNH3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-78M134WNH3');
+</script>
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="../../index.html">
-        <span class="icon">
-          <i class="fas fa-home"></i>
-        </span>
-      </a>
-    </div>
-  </div>
-</nav>
+{% include navbar.html %}
 
-<section class="hero">
-  <div class="hero-body">
+<section class="hero publication-hero">
+  <div class="publication-hero-bg" style="background-image: url('./static/images/dramatic_shot.png');"></div>
+  <div class="hero-body" style="position: relative; z-index: 1;">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title"><b style="color: #8528aa">GenTact-Prox</b>: Design, Mapping, and Contact Anticipation with 3D-printed Whole-Body Tactile and Proximity Sensors</h1>
+          <h1 class="title is-1 publication-title"><b style="color: var(--color-SCPS);">GenTact-Prox</b>: Design, Mapping, and Contact Anticipation with 3D-printed Whole-Body Tactile and Proximity Sensors</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
 
@@ -69,7 +65,10 @@
           
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://hiro-group.ronc.one/"><img src="../../imgs/logos/hiro_logo.png" style="height: 5em; margin-left: 2em; vertical-align: middle;"></a>
+              <a href="https://hiro-group.ronc.one/">
+                <img src="../../imgs/logos/logo-long-white-text.svg" class="logo-dark" style="height: 5em; margin-left: 2em; vertical-align: middle;">
+                <img src="../../imgs/logos/hiro_logo.png" class="logo-light" style="height: 5em; margin-left: 2em; vertical-align: middle;">
+              </a>
             </span>
           </div>
 
@@ -118,7 +117,7 @@
   </div>
 </section>
 
-<section class="section" style="background-color: #f5f5f5;">
+<section class="section has-bg-alt">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
@@ -126,7 +125,7 @@
         <h2 class="title is-2">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Robots operating in dynamic and shared environments benefit from anticipating contact before it occurs. We present <b style="color: #8528aa">GenTact-Prox</b>, a fully 3D-printed artificial skin that integrates tactile and proximity sensing for contact detection and anticipation. The skin is modular, procedurally generated to fit any robot morphology, and can cover the whole body of a robot—achieving detection ranges of up to 18 cm. To characterize how robots perceive nearby space through this skin, we introduce a data-driven framework for mapping the <b>Perisensory Space (PSS)</b>—the body-centric volume of space around the robot where sensors provide actionable information for contact anticipation. We demonstrate this approach on a Franka Research 3 robot equipped with five GenTact-Prox units, enabling online object-aware operation and contact prediction.
+            Robots operating in dynamic and shared environments benefit from anticipating contact before it occurs. We present <b style="color: var(--color-SCPS);">GenTact-Prox</b>, a fully 3D-printed artificial skin that integrates tactile and proximity sensing for contact detection and anticipation. The skin is modular, procedurally generated to fit any robot morphology, and can cover the whole body of a robot—achieving detection ranges of up to 18 cm. To characterize how robots perceive nearby space through this skin, we introduce a data-driven framework for mapping the <b>Perisensory Space (PSS)</b>—the body-centric volume of space around the robot where sensors provide actionable information for contact anticipation. We demonstrate this approach on a Franka Research 3 robot equipped with five GenTact-Prox units, enabling online object-aware operation and contact prediction.
           </p>
         </div>
       </div>
@@ -138,16 +137,16 @@
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Extension Overview -->
-    <div class="columns is-centered has-text-centered">
+    <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-2">Contributions</h2>
         <div class="content has-text-justified">
           <p>
-            Building on the <a href="./icra2025.html">GenTact Toolbox</a> procedural design pipeline for whole-body, 3D-printed tactile skins, <b style="color: #8528aa">GenTact-Prox</b> introduces two key advances: <b>(i)</b> a 3D-printed whole-body artificial skin that senses both <b>tactile and proximity stimuli</b>, extending the original system's binary contact detection to detect objects up to 18 cm away; and <b>(ii)</b> a machine learning method for mapping the <b>Perisensory Space (PSS)</b>—the body-centric volume of space where onboard sensors can reliably detect nearby objects—enabling contact anticipation with arbitrarily distributed capacitive sensors.
+            Building on the <a href="./icra2025.html">GenTact Toolbox</a> procedural design pipeline for whole-body, 3D-printed tactile skins, <b style="color: var(--color-SCPS);">GenTact-Prox</b> introduces two key advances: <b>(i)</b> a 3D-printed whole-body artificial skin that senses both <b>tactile and proximity stimuli</b>, extending the original system's binary contact detection to detect objects up to 18 cm away; and <b>(ii)</b> a machine learning method for mapping the <b>Perisensory Space (PSS)</b>—the body-centric volume of space where onboard sensors can reliably detect nearby objects—enabling contact anticipation with arbitrarily distributed capacitive sensors.
           </p>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Contributions -->
     <!-- <div class="columns is-centered has-text-centered" style="margin-top: 2rem;">
@@ -174,6 +173,16 @@
       </div>
     </div>
 
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content has-text-centered">
+          <video id="pipeline_steps" disableremoteplayback="" autoplay="" muted="" loop="" playsinline="" fetchpriority="high" poster="./static/images/pipeline_steps.png">
+            <source src="./static/videos/generation.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
     <!-- Self-Capacitance Sensing -->
     <div class="columns is-centered has-text-centered" style="margin-top: 2rem;">
       <div class="column">
@@ -185,6 +194,26 @@
           <p>
             Distance is estimated by measuring how quickly the sensor's circuit charges and discharges—no contact required. The sensors are read by an ESP32-C6 microcontroller at <b>15–30 Hz</b>, providing a continuous stream of proximity data across the robot's body. Each sensor's detection range depends partly on its surface area; in our evaluation, ranges spanned from <b>2.6 cm to 18 cm</b>.
           </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content has-text-centered">
+          <video id="pipeline_steps" disableremoteplayback="" autoplay="" muted="" loop="" playsinline="" fetchpriority="high" poster="./static/images/pipeline_steps.png">
+            <source src="./static/videos/touch_examples.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content has-text-centered">
+          <video id="pipeline_steps" disableremoteplayback="" autoplay="" muted="" loop="" playsinline="" fetchpriority="high" poster="./static/images/pipeline_steps.png">
+            <source src="./static/videos/data_generation.mp4" type="video/mp4">
+          </video>
         </div>
       </div>
     </div>
@@ -204,6 +233,16 @@
       </div>
     </div>
 
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content has-text-centered">
+          <video id="pipeline_steps" disableremoteplayback="" autoplay="" muted="" loop="" playsinline="" fetchpriority="high" poster="./static/images/pipeline_steps.png">
+            <source src="./static/videos/predictions.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
     <!-- Results -->
     <div class="columns is-centered has-text-centered" style="margin-top: 2rem;">
       <div class="column">
@@ -218,6 +257,16 @@
             <li><b>Collision Avoidance:</b> The robot successfully detected a human hand approaching its path and <b>slowed down and avoided the obstructed region</b> before physical contact occurred, then resumed normal motion once the path was clear.</li>
             <li><b>Low Cost and Open Source:</b> Each skin unit costs less than <b>$25 USD</b> to fabricate. All procedural design operations and printable files are open-sourced.</li>
           </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content has-text-centered">
+          <video id="pipeline_steps" disableremoteplayback="" autoplay="" muted="" loop="" playsinline="" fetchpriority="high" poster="./static/images/pipeline_steps.png">
+            <source src="./static/videos/demo.mp4" type="video/mp4">
+          </video>
         </div>
       </div>
     </div>

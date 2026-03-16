@@ -10,7 +10,7 @@
   description: "Extends GenTact with a form-fitting, large-area sensor mounting solution for time-of-flight sensors."
   year: 2025
   venue: "2025 Humanoids Workshop on Advances in Contact-Rich Robotics: Rich Tactile-Based Physical Interaction [ConRich]"
-  card_venue: "Humanoids 2025"
+  card_venue: "Humanoids ConRich Workshop 2025"
   page_url: "https://hiro-group.ronc.one/papers/2025_Soukhovei_CR_workshop.pdf"
   image_url: "imgs/cards/gentact_cover.png"
   color: "#2853aa"

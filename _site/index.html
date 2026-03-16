@@ -12,176 +12,141 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="/static/css/index.css">
-  <link rel="icon" href="/imgs/logos/hiro_icon.svg">
+  <link rel="icon" href="/imgs/logos/icon.png">
+  <link rel="apple-touch-icon" href="/imgs/logos/icon.png">
 
-  <style>
-    .paper-card {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      overflow: hidden;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-    }
-    .paper-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 40px rgba(0,0,0,0.15);
-    }
-    .paper-card a {
-      text-decoration: none;
-      color: inherit;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-    }
-    .paper-image {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-bottom: 3px solid var(--card-color, #2853aa);
-    }
-    .paper-content {
-      padding: 1.5rem;
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-    }
-    .paper-title {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--card-color, #2853aa);
-      margin-bottom: 0.5rem;
-    }
-    .paper-venue {
-      font-size: 0.9rem;
-      color: #666;
-      margin-bottom: 1rem;
-      font-style: italic;
-    }
-    .paper-blurb {
-      font-size: 0.95rem;
-      color: #444;
-      line-height: 1.5;
-      flex-grow: 1;
-    }
-    .paper-cta {
-      margin-top: 1rem;
-      color: var(--card-color, #2853aa);
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .paper-cta i {
-      transition: transform 0.2s ease;
-    }
-    .paper-card:hover .paper-cta i {
-      transform: translateX(4px);
-    }
-    .landing-hero {
-      background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ed 100%);
-      padding: 4rem 0;
-    }
-    .cards-section {
-      padding: 4rem 0;
-    }
-    .contributors-section {
-      padding: 2rem 0 4rem;
-    }
-    .contributors-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-    .contributor {
-      width: 120px;
-      text-align: center;
-    }
-    .contributor-photo {
-      width: 96px;
-      height: 96px;
-      border-radius: 999px;
-      object-fit: cover;
-      border: 2px solid #d8dce3;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-    .contributor-photo-link {
-      display: inline-block;
-      border-radius: 999px;
-    }
-    .contributor-photo-link:hover .contributor-photo {
-      transform: translateY(-4px) scale(1.03);
-      box-shadow: 0 10px 24px rgba(0,0,0,0.18);
-    }
-    .contributor-name {
-      margin-top: 0.6rem;
-      font-size: 0.9rem;
-      color: #333;
-      line-height: 1.25;
-    }
-  </style>
 </head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-78M134WNH3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-78M134WNH3');
+</script>
 <body>
 
-<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+<script>(function(){document.documentElement.setAttribute('data-theme',localStorage.getItem('theme')||'dark')})()</script>
+<link rel="stylesheet" href="/static/css/navbar.css">
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation" id="main-navbar">
   <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+    <a class="navbar-item" href="/" style="font-weight: 700; font-size: 1.1rem;">
+      GenTact Toolbox
+    </a>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
     </a>
   </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://hiro-group.ronc.one/">
-        <span class="icon">
-          <i class="fas fa-home"></i>
-        </span>
+  <div id="navMenu" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="/">Home</a>
+      <a class="navbar-item" href="/#publications">Publications</a>
+      <a class="navbar-item" href="/#tutorials">Tutorials</a>
+      <a class="navbar-item" href="/#people">People</a>
+      <a class="navbar-item" href="/#contact">Contact</a>
+    </div>
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <button id="theme-toggle" class="button is-small is-rounded" aria-label="Toggle theme">
+          <span class="icon">
+            <i class="fas fa-sun theme-icon-sun"></i>
+            <i class="fas fa-moon theme-icon-moon"></i>
+          </span>
+        </button>
+      </div>
+      <a class="navbar-item" href="https://hiro-group.ronc.one/" target="_blank" rel="noopener noreferrer">
+        <img src="/imgs/logos/logo-long-white-text.svg" class="logo-dark navbar-logo">
+        <img src="/imgs/logos/hiro_logo.png" class="logo-light navbar-logo">
       </a>
     </div>
   </div>
-</nav> -->
+</nav>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('theme-toggle').addEventListener('click', function() {
+    var current = document.documentElement.getAttribute('data-theme');
+    var next = current === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+  });
+  var burger = document.querySelector('.navbar-burger');
+  var menu = document.getElementById(burger.dataset.target);
+  burger.addEventListener('click', function() {
+    burger.classList.toggle('is-active');
+    menu.classList.toggle('is-active');
+  });
+});
+</script>
 
-<section class="landing-hero">
-  <div class="container is-max-desktop">
+
+<section class="landing-hero" id="about" style="--hero-bg-image: url('/imgs/bg/gtp_prox2.png');">
+  <div class="landing-hero-bg"></div>
+  <div class="container is-max-desktop" style="position: relative; z-index: 1;">
     <div class="has-text-centered">
-      <h1 class="title is-1"><b style="color: #2853aa">GenTact Toolbox</b></h1>
+      <h1 class="title is-1"><b style="color: var(--color-RC);">GenTact Toolbox</b></h1>
       <h2 class="subtitle is-4" style="margin-top: 1rem;">A Procedural Whole-Body Sensor Design Pipeline</h2>
       <p class="is-size-5" style="max-width: 700px; margin: 2rem auto 0;">
         The GenTact Toolbox provides computational tools for creating versatile whole-body tactile skins 
         tailored to both robot shape and application.
       </p>
-      <div style="margin-top: 2rem;">
-        <a href="https://hiro-group.ronc.one/"><img src="/imgs/logos/hiro_logo.png" style="height: 5em; margin: 0 1em; vertical-align: middle;"></a>
-      </div>
     </div>
-    <div class="container is-max-desktop" style="margin-top: 2.5rem;">
-      <div class="has-text-centered">
-        <a href="https://github.com/cKohl10/GenTact" class="button is-dark is-rounded is-medium">
-          <span class="icon"><i class="fab fa-github"></i></span>
-          <span>View on GitHub</span>
-        </a>
-      </div>
+    <div class="hero-buttons">
+      <a href="https://github.com/cKohl10/GenTact" class="button is-dark is-rounded is-medium">
+        <span class="icon"><i class="fab fa-github"></i></span>
+        <span>View on GitHub</span>
+      </a>
+      <a href="#" class="button is-dark is-rounded is-medium">
+        <span class="icon"><i class="fas fa-cube"></i></span>
+        <span>View Premade STLs (Coming Soon)</span>
+      </a>
+      <a href="#" class="button is-dark is-rounded is-medium">
+        <span class="icon"><i class="fas fa-microchip"></i></span>
+        <span>Purchase Electronics (Coming Soon)</span>
+      </a>
     </div>
   </div>
 </section>
 
-<section class="cards-section">
+<section class="cards-section has-bg-alt" id="publications">
   <div class="container">
-    <h2 class="title is-3 has-text-centered" style="margin-bottom: 2rem;">Publications</h2>
-    <div class="columns is-centered">
+    <h2 class="title is-3 has-text-centered" style="margin-bottom: 1rem;">Publications</h2>
+    <div class="modality-filters">
+      <button class="modality-filter active" data-modality="all">All</button>
       
-      <div class="column is-4">
-        <div class="paper-card" style="--card-color: #2853aa;">
-          <a href="/websites/icra2025/icra2025.html">
-            <img src="/imgs/cards/gentact_cover.png" alt="GenTact Toolbox: A Computational Design Pipeline" class="paper-image" style="object-fit: contain;">
+      <button class="modality-filter" data-modality="SCPS">
+        <span class="modality-dot" style="background: var(--color-SCPS);"></span>
+        Self-Capacitive
+      </button>
+      
+      <button class="modality-filter" data-modality="RC">
+        <span class="modality-dot" style="background: var(--color-RC);"></span>
+        RC-Coupling
+      </button>
+      
+      <button class="modality-filter" data-modality="TOF">
+        <span class="modality-dot" style="background: var(--color-TOF);"></span>
+        Time-of-Flight
+      </button>
+      
+    </div>
+    <div class="columns is-centered is-multiline" id="publications-grid">
+      <div class="column is-4 pub-column" data-modalities="RC">
+        <div class="pub-card-wrapper">
+          
+          <div class="highlight-badge-spacer"></div>
+          
+          <div class="paper-card" style="--card-color: var(--color-RC);">
+            <a href="/websites/icra2025/icra2025.html">
+            <img src="/imgs/cards/gt_cover2_alpha.png" alt="GenTact Toolbox: A Computational Design Pipeline" class="paper-image" style="object-fit: contain;">
             <div class="paper-content">
               <div class="paper-title">GenTact Toolbox: A Computational Design Pipeline</div>
               <div class="paper-venue">ICRA 2025</div>
+              <div class="modality-tags"><span class="modality-tag" style="--mod-color: var(--color-RC);">
+                      <span class="modality-dot-sm" style="background: var(--color-RC);"></span>
+                      RC-Coupling
+                    </span></div>
               <p class="paper-blurb">A computational pipeline for creating versatile whole-body tactile skins through procedural mesh generation, task-driven simulation, and multi-material 3D printing.</p>
               <div class="paper-cta">
                 Learn more <i class="fas fa-arrow-right"></i>
@@ -189,15 +154,23 @@
             </div>
           </a>
         </div>
+        </div>
       </div>
-      
-      <div class="column is-4">
-        <div class="paper-card" style="--card-color: #2853aa;">
-          <a href="https://hiro-group.ronc.one/papers/2025_Soukhovei_CR_workshop.pdf">
-            <img src="/imgs/cards/gentact_cover.png" alt="Form-Fitting, Large-Area Sensor Mounting for Obstacle Detection" class="paper-image" style="object-fit: contain;">
+      <div class="column is-4 pub-column" data-modalities="TOF">
+        <div class="pub-card-wrapper">
+          
+          <div class="highlight-badge-spacer"></div>
+          
+          <div class="paper-card" style="--card-color: var(--color-TOF);">
+            <a href="https://hiro-group.ronc.one/papers/2025_Soukhovei_CR_workshop.pdf">
+            <img src="/imgs/cards/formfitting_cover.png" alt="Form-Fitting, Large-Area Sensor Mounting for Obstacle Detection" class="paper-image" style="object-fit: contain;">
             <div class="paper-content">
               <div class="paper-title">Form-Fitting, Large-Area Sensor Mounting for Obstacle Detection</div>
-              <div class="paper-venue">Humanoids 2025</div>
+              <div class="paper-venue">Humanoids ConRich Workshop 2025</div>
+              <div class="modality-tags"><span class="modality-tag" style="--mod-color: var(--color-TOF);">
+                      <span class="modality-dot-sm" style="background: var(--color-TOF);"></span>
+                      Time-of-Flight
+                    </span></div>
               <p class="paper-blurb">Extends GenTact with a form-fitting, large-area sensor mounting solution for time-of-flight sensors.</p>
               <div class="paper-cta">
                 Learn more <i class="fas fa-arrow-right"></i>
@@ -205,18 +178,56 @@
             </div>
           </a>
         </div>
+        </div>
       </div>
-      
-      <div class="column is-4">
-        <div class="paper-card" style="--card-color: #8528aa;">
-          <a href="/websites/icra2026/icra2026.html">
-            <img src="/imgs/cards/gtp_cover2.png" alt="GenTact-Prox: Tactile and Proximity Sensing" class="paper-image" style="object-fit: contain;">
+      <div class="column is-4 pub-column" data-modalities="SCPS">
+        <div class="pub-card-wrapper pub-card-wrapper-highlight">
+          
+          <div class="highlight-badge" style="color: var(--color-SCPS);">
+            <i class="fas fa-star"></i> Recently accepted to ICRA 2026
+          </div>
+          
+          <div class="paper-card paper-card-highlight" style="--card-color: var(--color-SCPS);">
+            <a href="/websites/icra2026/icra2026.html">
+            <img src="/imgs/cards/gtp_cover7_alpha.png" alt="GenTact-Prox: Tactile and Proximity Sensing" class="paper-image" style="object-fit: contain;">
             <div class="paper-content">
               <div class="paper-title">GenTact-Prox: Tactile and Proximity Sensing</div>
               <div class="paper-venue">ICRA 2026</div>
-              <p class="paper-blurb">Extends GenTact with capacitive sensing for proximity detection (up to 18 cm) and contact anticipation. Introduces a data-driven framework for mapping the proximal receptive field, enabling robots to perceive and respond to nearby objects before contact occurs.</p>
+              <div class="modality-tags"><span class="modality-tag" style="--mod-color: var(--color-SCPS);">
+                      <span class="modality-dot-sm" style="background: var(--color-SCPS);"></span>
+                      Self-Capacitive
+                    </span></div>
+              <p class="paper-blurb">Extends GenTact with capacitive sensing for proximity detection (up to 18 cm) and contact anticipation.</p>
               <div class="paper-cta">
                 Learn more <i class="fas fa-arrow-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<section class="tutorials-section" id="tutorials">
+  <div class="container">
+    <h2 class="title is-3 has-text-centered" style="margin-bottom: 2rem;">Tutorials</h2>
+    <div class="columns is-centered is-multiline">
+      
+      <div class="column is-4">
+        <div class="paper-card">
+          
+          <div class="tutorial-video"><iframe src="https://www.youtube.com/embed/qH5VpunpglI" allowfullscreen loading="lazy"></iframe>
+          </div>
+          
+          <a href="https://youtu.be/qH5VpunpglI?si=hzdQN7NrVbj2J-H9" target="_blank" rel="noopener noreferrer" class="tutorial-content">
+            <div class="paper-content">
+              <div class="paper-title" style="color: var(--text-secondary);">How to make 3D-printed tactile sensors for robots using GenTact Toolbox (Part 1 - Design)</div>
+              <p class="paper-blurb">Beginner tutorial on how to design 3D-printed tactile sensors for robots using the GenTact Toolbox.</p>
+              <div class="paper-cta" style="color: var(--text-muted);">
+                Watch tutorial <i class="fas fa-arrow-right"></i>
               </div>
             </div>
           </a>
@@ -227,7 +238,7 @@
   </div>
 </section>
 
-<section class="contributors-section">
+<section class="contributors-section" id="people">
   <div class="container">
     <h2 class="title is-3 has-text-centered">Contributors</h2>
     <div class="contributors-grid">
@@ -239,34 +250,47 @@
         </a>
         
         <div class="contributor-name">Carson Kohlbrenner</div>
+        <div class="contributor-role">Maintainer</div>
       </div>
       
       <div class="contributor">
         
-        <img class="contributor-photo" src="/imgs/people/caleb.jpg" alt="Caleb Escobedo">
+        <a class="contributor-photo-link" href="https://hiro-group.ronc.one/caleb.html" target="_blank" rel="noopener noreferrer">
+          <img class="contributor-photo" src="/imgs/people/caleb.jpg" alt="Caleb Escobedo">
+        </a>
         
         <div class="contributor-name">Caleb Escobedo</div>
+        
       </div>
       
       <div class="contributor">
         
-        <img class="contributor-photo" src="/imgs/people/anna_souk.png" alt="Anna Soukhovei">
+        <a class="contributor-photo-link" href="https://www.linkedin.com/in/anna-soukhovei-3b2b6a2a4/" target="_blank" rel="noopener noreferrer">
+          <img class="contributor-photo" src="/imgs/people/anna_souk.png" alt="Anna Soukhovei">
+        </a>
         
         <div class="contributor-name">Anna Soukhovei</div>
+        
       </div>
       
       <div class="contributor">
         
-        <img class="contributor-photo" src="/imgs/people/alex.jpg" alt="Alex Dickhans">
+        <a class="contributor-photo-link" href="https://alex.dickhans.net/" target="_blank" rel="noopener noreferrer">
+          <img class="contributor-photo" src="/imgs/people/alex.jpg" alt="Alex Dickhans">
+        </a>
         
         <div class="contributor-name">Alex Dickhans</div>
+        
       </div>
       
       <div class="contributor">
         
-        <img class="contributor-photo" src="/imgs/people/sandra.png" alt="Sandra Bae">
+        <a class="contributor-photo-link" href="https://sandrabae.github.io/" target="_blank" rel="noopener noreferrer">
+          <img class="contributor-photo" src="/imgs/people/sandra.png" alt="Sandra Bae">
+        </a>
         
         <div class="contributor-name">Sandra Bae</div>
+        
       </div>
       
       <div class="contributor">
@@ -276,9 +300,20 @@
         </a>
         
         <div class="contributor-name">Dr. Alessandro Roncone</div>
+        
       </div>
       
     </div>
+  </div>
+</section>
+
+<section id="contact" style="padding: 3rem 0;">
+  <div class="container has-text-centered">
+    <h2 class="title is-3">Contact</h2>
+    <p class="is-size-5" style="color: var(--text-secondary);">
+      For questions and collaborations, please email <a href="mailto:carson.kohlbrenner@colorado.edu" style="color: var(--color-RC);">carson.kohlbrenner@colorado.edu</a> or visit the
+      <a href="https://hiro-group.ronc.one/" style="color: var(--color-RC);">HIRO Group</a> website.
+    </p>
   </div>
 </section>
 
@@ -307,6 +342,30 @@
   </div>
 </footer>
 
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const filters = document.querySelectorAll('.modality-filter');
+  const cards = document.querySelectorAll('.pub-column');
+
+  filters.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      filters.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      const mod = btn.getAttribute('data-modality');
+
+      cards.forEach(function(card) {
+        const modalities = card.getAttribute('data-modalities').split(',');
+        if (mod === 'all' || modalities.indexOf(mod) !== -1) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+});
+</script>
 
 </body>
 </html>

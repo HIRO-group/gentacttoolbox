@@ -15,179 +15,147 @@ layout: null
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="{{ '/static/css/index.css' | relative_url }}">
-  <link rel="icon" href="{{ '/imgs/logos/hiro_icon.svg' | relative_url }}">
+  <link rel="icon" href="{{ '/imgs/logos/icon.png' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/imgs/logos/icon.png' | relative_url }}">
 
-  <style>
-    .paper-card {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      overflow: hidden;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-    }
-    .paper-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 40px rgba(0,0,0,0.15);
-    }
-    .paper-card a {
-      text-decoration: none;
-      color: inherit;
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-    }
-    .paper-image {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-bottom: 3px solid var(--card-color, #2853aa);
-    }
-    .paper-content {
-      padding: 1.5rem;
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-    }
-    .paper-title {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--card-color, #2853aa);
-      margin-bottom: 0.5rem;
-    }
-    .paper-venue {
-      font-size: 0.9rem;
-      color: #666;
-      margin-bottom: 1rem;
-      font-style: italic;
-    }
-    .paper-blurb {
-      font-size: 0.95rem;
-      color: #444;
-      line-height: 1.5;
-      flex-grow: 1;
-    }
-    .paper-cta {
-      margin-top: 1rem;
-      color: var(--card-color, #2853aa);
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .paper-cta i {
-      transition: transform 0.2s ease;
-    }
-    .paper-card:hover .paper-cta i {
-      transform: translateX(4px);
-    }
-    .landing-hero {
-      background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ed 100%);
-      padding: 4rem 0;
-    }
-    .cards-section {
-      padding: 4rem 0;
-    }
-    .contributors-section {
-      padding: 2rem 0 4rem;
-    }
-    .contributors-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-    .contributor {
-      width: 120px;
-      text-align: center;
-    }
-    .contributor-photo {
-      width: 96px;
-      height: 96px;
-      border-radius: 999px;
-      object-fit: cover;
-      border: 2px solid #d8dce3;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-    .contributor-photo-link {
-      display: inline-block;
-      border-radius: 999px;
-    }
-    .contributor-photo-link:hover .contributor-photo {
-      transform: translateY(-4px) scale(1.03);
-      box-shadow: 0 10px 24px rgba(0,0,0,0.18);
-    }
-    .contributor-name {
-      margin-top: 0.6rem;
-      font-size: 0.9rem;
-      color: #333;
-      line-height: 1.25;
-    }
-  </style>
 </head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-78M134WNH3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-78M134WNH3');
+</script>
 <body>
 
-<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://hiro-group.ronc.one/">
-        <span class="icon">
-          <i class="fas fa-home"></i>
-        </span>
-      </a>
-    </div>
-  </div>
-</nav> -->
+{% include navbar.html %}
 
-<section class="landing-hero">
-  <div class="container is-max-desktop">
+<section class="landing-hero" id="about" style="--hero-bg-image: url('{{ '/imgs/bg/gtp_prox2.png' | relative_url }}');">
+  <div class="landing-hero-bg"></div>
+  <div class="container is-max-desktop" style="position: relative; z-index: 1;">
     <div class="has-text-centered">
-      <h1 class="title is-1"><b style="color: #2853aa">GenTact Toolbox</b></h1>
+      <h1 class="title is-1"><b style="color: var(--color-RC);">GenTact Toolbox</b></h1>
       <h2 class="subtitle is-4" style="margin-top: 1rem;">A Procedural Whole-Body Sensor Design Pipeline</h2>
       <p class="is-size-5" style="max-width: 700px; margin: 2rem auto 0;">
         The GenTact Toolbox provides computational tools for creating versatile whole-body tactile skins 
         tailored to both robot shape and application.
       </p>
-      <div style="margin-top: 2rem;">
-        <a href="https://hiro-group.ronc.one/"><img src="{{ '/imgs/logos/hiro_logo.png' | relative_url }}" style="height: 5em; margin: 0 1em; vertical-align: middle;"></a>
-      </div>
     </div>
-    <div class="container is-max-desktop" style="margin-top: 2.5rem;">
-      <div class="has-text-centered">
-        <a href="https://github.com/cKohl10/GenTact" class="button is-dark is-rounded is-medium">
-          <span class="icon"><i class="fab fa-github"></i></span>
-          <span>View on GitHub</span>
-        </a>
-      </div>
+    <div class="hero-buttons">
+      <a href="https://github.com/cKohl10/GenTact" class="button is-dark is-rounded is-medium">
+        <span class="icon"><i class="fab fa-github"></i></span>
+        <span>View on GitHub</span>
+      </a>
+      <a href="#" class="button is-dark is-rounded is-medium">
+        <span class="icon"><i class="fas fa-cube"></i></span>
+        <span>View Premade STLs (Coming Soon)</span>
+      </a>
+      <a href="#" class="button is-dark is-rounded is-medium">
+        <span class="icon"><i class="fas fa-microchip"></i></span>
+        <span>Purchase Electronics (Coming Soon)</span>
+      </a>
     </div>
   </div>
 </section>
 
-<section class="cards-section">
+<section class="cards-section has-bg-alt" id="publications">
   <div class="container">
-    <h2 class="title is-3 has-text-centered" style="margin-bottom: 2rem;">Publications</h2>
-    <div class="columns is-centered">
+    <h2 class="title is-3 has-text-centered" style="margin-bottom: 1rem;">Publications</h2>
+    <div class="modality-filters">
+      <button class="modality-filter active" data-modality="all">All</button>
+      {% for mod in site.data.sensing_modalities %}
+      <button class="modality-filter" data-modality="{{ mod.tag }}">
+        <span class="modality-dot" style="background: var(--color-{{ mod.tag }});"></span>
+        {{ mod.modality }}
+      </button>
+      {% endfor %}
+    </div>
+    <div class="columns is-centered is-multiline" id="publications-grid">
       {% for publication in site.data.publications %}
-      <div class="column is-4">
-        <div class="paper-card" style="--card-color: {{ publication.color }};">
-          <a href="{{ publication.page_url | relative_url }}">
-            <img src="{{ publication.image_url | relative_url }}" alt="{{ publication.title }}" class="paper-image" style="object-fit: contain;">
+      {%- assign mods = publication.modality | split: "," -%}
+      {%- assign color_vars = "" -%}
+      {%- assign first_var = "" -%}
+      {%- for mod_tag in mods -%}
+        {%- assign stripped_tag = mod_tag | strip -%}
+        {%- assign var_ref = "var(--color-" | append: stripped_tag | append: ")" -%}
+        {%- if first_var == "" -%}
+          {%- assign first_var = var_ref -%}
+          {%- assign color_vars = var_ref -%}
+        {%- else -%}
+          {%- assign color_vars = color_vars | append: ", " | append: var_ref -%}
+        {%- endif -%}
+      {%- endfor -%}
+      {%- assign var_list = color_vars | split: ", " -%}
+      <div class="column is-4 pub-column" data-modalities="{{ publication.modality }}">
+        <div class="pub-card-wrapper{% if publication.highlight %} pub-card-wrapper-highlight{% endif %}">
+          {% if publication.highlight %}
+          <div class="highlight-badge" style="color: {{ first_var }};">
+            <i class="fas fa-star"></i> {{ publication.highlight }}
+          </div>
+          {% else %}
+          <div class="highlight-badge-spacer"></div>
+          {% endif %}
+          <div class="paper-card{% if publication.highlight %} paper-card-highlight{% endif %}" style="--card-color: {{ first_var }};">
+            <a href="{{ publication.page_url | relative_url }}">
+            <img src="{{ publication.image_url | relative_url }}" alt="{{ publication.title }}" class="paper-image" style="object-fit: contain;{% if var_list.size > 1 %} border-image: linear-gradient(to right, {{ color_vars }}) 1;{% endif %}">
             <div class="paper-content">
               <div class="paper-title">{{ publication.title }}</div>
               <div class="paper-venue">{{ publication.card_venue | default: publication.venue }}</div>
+              <div class="modality-tags">
+                {%- for mod_tag in mods -%}
+                  {%- assign stripped_tag = mod_tag | strip -%}
+                  {%- for sm in site.data.sensing_modalities -%}
+                    {%- if sm.tag == stripped_tag -%}
+                    <span class="modality-tag" style="--mod-color: var(--color-{{ sm.tag }});">
+                      <span class="modality-dot-sm" style="background: var(--color-{{ sm.tag }});"></span>
+                      {{ sm.modality }}
+                    </span>
+                    {%- endif -%}
+                  {%- endfor -%}
+                {%- endfor -%}
+              </div>
               <p class="paper-blurb">{{ publication.description }}</p>
               <div class="paper-cta">
                 Learn more <i class="fas fa-arrow-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="tutorials-section" id="tutorials">
+  <div class="container">
+    <h2 class="title is-3 has-text-centered" style="margin-bottom: 2rem;">Tutorials</h2>
+    <div class="columns is-centered is-multiline">
+      {% for tutorial in site.data.tutorials %}
+      <div class="column is-4">
+        <div class="paper-card">
+          {% if tutorial.embedded_url %}
+          <div class="tutorial-video">
+            {%- if tutorial.embedded_url contains "youtu.be/" -%}
+              {%- assign video_id = tutorial.embedded_url | split: "youtu.be/" | last | split: "?" | first -%}
+            {%- elsif tutorial.embedded_url contains "v=" -%}
+              {%- assign video_id = tutorial.embedded_url | split: "v=" | last | split: "&" | first -%}
+            {%- endif -%}
+            <iframe src="https://www.youtube.com/embed/{{ video_id }}" allowfullscreen loading="lazy"></iframe>
+          </div>
+          {% elsif tutorial.image_url %}
+          <a href="{{ tutorial.link }}" target="_blank" rel="noopener noreferrer">
+            <img src="{{ tutorial.image_url | relative_url }}" alt="{{ tutorial.title }}" class="paper-image">
+          </a>
+          {% endif %}
+          <a href="{{ tutorial.link }}" target="_blank" rel="noopener noreferrer" class="tutorial-content">
+            <div class="paper-content">
+              <div class="paper-title" style="color: var(--text-secondary);">{{ tutorial.title }}</div>
+              <p class="paper-blurb">{{ tutorial.description }}</p>
+              <div class="paper-cta" style="color: var(--text-muted);">
+                Watch tutorial <i class="fas fa-arrow-right"></i>
               </div>
             </div>
           </a>
@@ -198,7 +166,7 @@ layout: null
   </div>
 </section>
 
-<section class="contributors-section">
+<section class="contributors-section" id="people">
   <div class="container">
     <h2 class="title is-3 has-text-centered">Contributors</h2>
     <div class="contributors-grid">
@@ -212,9 +180,20 @@ layout: null
         <img class="contributor-photo" src="{{ '/imgs/people/' | append: person.pic | relative_url }}" alt="{{ person.name }}">
         {% endif %}
         <div class="contributor-name">{{ person.name }}</div>
+        {% if person.role %}<div class="contributor-role">{{ person.role }}</div>{% endif %}
       </div>
       {% endfor %}
     </div>
+  </div>
+</section>
+
+<section id="contact" style="padding: 3rem 0;">
+  <div class="container has-text-centered">
+    <h2 class="title is-3">Contact</h2>
+    <p class="is-size-5" style="color: var(--text-secondary);">
+      For questions and collaborations, please email <a href="mailto:carson.kohlbrenner@colorado.edu" style="color: var(--color-RC);">carson.kohlbrenner@colorado.edu</a> or visit the
+      <a href="https://hiro-group.ronc.one/" style="color: var(--color-RC);">HIRO Group</a> website.
+    </p>
   </div>
 </section>
 
@@ -243,6 +222,30 @@ layout: null
   </div>
 </footer>
 
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const filters = document.querySelectorAll('.modality-filter');
+  const cards = document.querySelectorAll('.pub-column');
+
+  filters.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      filters.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      const mod = btn.getAttribute('data-modality');
+
+      cards.forEach(function(card) {
+        const modalities = card.getAttribute('data-modalities').split(',');
+        if (mod === 'all' || modalities.indexOf(mod) !== -1) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+});
+</script>
 
 </body>
 </html>
