@@ -33,8 +33,9 @@ layout: null
 
 {% include navbar.html %}
 
-<section class="hero">
-  <div class="hero-body">
+<section class="hero publication-hero">
+  <div class="publication-hero-bg" style="background-image: url('./static/images/dramatic_shot.png');"></div>
+  <div class="hero-body" style="position: relative; z-index: 1;">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
@@ -135,7 +136,7 @@ layout: null
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Extension Overview -->
-    <div class="columns is-centered has-text-centered">
+    <!-- <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-2">Contributions</h2>
         <div class="content has-text-justified">
@@ -144,7 +145,7 @@ layout: null
           </p>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Contributions -->
     <!-- <div class="columns is-centered has-text-centered" style="margin-top: 2rem;">
@@ -171,6 +172,16 @@ layout: null
       </div>
     </div>
 
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content has-text-centered">
+          <video id="pipeline_steps" disableremoteplayback="" autoplay="" muted="" loop="" playsinline="" fetchpriority="high" poster="./static/images/pipeline_steps.png">
+            <source src="./static/videos/generation.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
     <!-- Self-Capacitance Sensing -->
     <div class="columns is-centered has-text-centered" style="margin-top: 2rem;">
       <div class="column">
@@ -182,6 +193,26 @@ layout: null
           <p>
             Distance is estimated by measuring how quickly the sensor's circuit charges and discharges—no contact required. The sensors are read by an ESP32-C6 microcontroller at <b>15–30 Hz</b>, providing a continuous stream of proximity data across the robot's body. Each sensor's detection range depends partly on its surface area; in our evaluation, ranges spanned from <b>2.6 cm to 18 cm</b>.
           </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content has-text-centered">
+          <video id="pipeline_steps" disableremoteplayback="" autoplay="" muted="" loop="" playsinline="" fetchpriority="high" poster="./static/images/pipeline_steps.png">
+            <source src="./static/videos/touch_examples.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content has-text-centered">
+          <video id="pipeline_steps" disableremoteplayback="" autoplay="" muted="" loop="" playsinline="" fetchpriority="high" poster="./static/images/pipeline_steps.png">
+            <source src="./static/videos/data_generation.mp4" type="video/mp4">
+          </video>
         </div>
       </div>
     </div>
@@ -201,6 +232,16 @@ layout: null
       </div>
     </div>
 
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content has-text-centered">
+          <video id="pipeline_steps" disableremoteplayback="" autoplay="" muted="" loop="" playsinline="" fetchpriority="high" poster="./static/images/pipeline_steps.png">
+            <source src="./static/videos/predictions.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
     <!-- Results -->
     <div class="columns is-centered has-text-centered" style="margin-top: 2rem;">
       <div class="column">
@@ -215,6 +256,16 @@ layout: null
             <li><b>Collision Avoidance:</b> The robot successfully detected a human hand approaching its path and <b>slowed down and avoided the obstructed region</b> before physical contact occurred, then resumed normal motion once the path was clear.</li>
             <li><b>Low Cost and Open Source:</b> Each skin unit costs less than <b>$25 USD</b> to fabricate. All procedural design operations and printable files are open-sourced.</li>
           </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content has-text-centered">
+          <video id="pipeline_steps" disableremoteplayback="" autoplay="" muted="" loop="" playsinline="" fetchpriority="high" poster="./static/images/pipeline_steps.png">
+            <source src="./static/videos/demo.mp4" type="video/mp4">
+          </video>
         </div>
       </div>
     </div>

@@ -2,6 +2,24 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
+.publication-hero {
+  position: relative;
+  overflow: hidden;
+}
+.publication-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.18; /* adjust alpha here (0 = invisible, 1 = fully opaque) */
+  z-index: 0;
+}
+.publication-hero .hero-body {
+  position: relative;
+  z-index: 1;
+}
+
 
 .footer .icon-link {
     font-size: 25px;

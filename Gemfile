@@ -2,8 +2,9 @@
 
 source "https://rubygems.org"
 
-# gem "rails"
-gem "jekyll"
+gem "jekyll", "~> 4.3"
+gem "liquid", "4.0.4"
 gem "webrick"
+gem "csv"
+gem "bigdecimal"
 
-gem "github-pages", group: :jekyll_plugins

@@ -86,8 +86,16 @@ layout: null
       {%- endfor -%}
       {%- assign var_list = color_vars | split: ", " -%}
       <div class="column is-4 pub-column" data-modalities="{{ publication.modality }}">
-        <div class="paper-card" style="--card-color: {{ first_var }};">
-          <a href="{{ publication.page_url | relative_url }}">
+        <div class="pub-card-wrapper{% if publication.highlight %} pub-card-wrapper-highlight{% endif %}">
+          {% if publication.highlight %}
+          <div class="highlight-badge" style="color: {{ first_var }};">
+            <i class="fas fa-star"></i> {{ publication.highlight }}
+          </div>
+          {% else %}
+          <div class="highlight-badge-spacer"></div>
+          {% endif %}
+          <div class="paper-card{% if publication.highlight %} paper-card-highlight{% endif %}" style="--card-color: {{ first_var }};">
+            <a href="{{ publication.page_url | relative_url }}">
             <img src="{{ publication.image_url | relative_url }}" alt="{{ publication.title }}" class="paper-image" style="object-fit: contain;{% if var_list.size > 1 %} border-image: linear-gradient(to right, {{ color_vars }}) 1;{% endif %}">
             <div class="paper-content">
               <div class="paper-title">{{ publication.title }}</div>
@@ -111,6 +119,7 @@ layout: null
               </div>
             </div>
           </a>
+        </div>
         </div>
       </div>
       {% endfor %}
@@ -169,6 +178,7 @@ layout: null
         <img class="contributor-photo" src="{{ '/imgs/people/' | append: person.pic | relative_url }}" alt="{{ person.name }}">
         {% endif %}
         <div class="contributor-name">{{ person.name }}</div>
+        {% if person.role %}<div class="contributor-role">{{ person.role }}</div>{% endif %}
       </div>
       {% endfor %}
     </div>
