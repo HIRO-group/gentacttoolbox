@@ -1,0 +1,53 @@
+<script>(function(){document.documentElement.setAttribute('data-theme',localStorage.getItem('theme')||'dark')})()</script>
+<link rel="stylesheet" href="{{ '/static/css/navbar.css' | relative_url }}">
+<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation" id="main-navbar">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="{{ '/' | relative_url }}" style="font-weight: 700; font-size: 1.1rem;">
+      GenTact Toolbox
+    </a>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div id="navMenu" class="navbar-menu">
+    <div class="navbar-start">
+      <a class="navbar-item" href="{{ '/' | relative_url }}">Home</a>
+      <a class="navbar-item" href="{{ '/' | relative_url }}#publications">Publications</a>
+      <a class="navbar-item" href="{{ '/' | relative_url }}#tutorials">Tutorials</a>
+      <a class="navbar-item" href="{{ '/' | relative_url }}#people">People</a>
+      <a class="navbar-item" href="{{ '/' | relative_url }}#contact">Contact</a>
+    </div>
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <button id="theme-toggle" class="button is-small is-rounded" aria-label="Toggle theme">
+          <span class="icon">
+            <i class="fas fa-sun theme-icon-sun"></i>
+            <i class="fas fa-moon theme-icon-moon"></i>
+          </span>
+        </button>
+      </div>
+      <a class="navbar-item" href="https://hiro-group.ronc.one/" target="_blank" rel="noopener noreferrer">
+        <img src="{{ '/imgs/logos/logo-long-white-text.svg' | relative_url }}" class="logo-dark navbar-logo">
+        <img src="{{ '/imgs/logos/hiro_logo.png' | relative_url }}" class="logo-light navbar-logo">
+      </a>
+    </div>
+  </div>
+</nav>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('theme-toggle').addEventListener('click', function() {
+    var current = document.documentElement.getAttribute('data-theme');
+    var next = current === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+  });
+  var burger = document.querySelector('.navbar-burger');
+  var menu = document.getElementById(burger.dataset.target);
+  burger.addEventListener('click', function() {
+    burger.classList.toggle('is-active');
+    menu.classList.toggle('is-active');
+  });
+});
+</script>
