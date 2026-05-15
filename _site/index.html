@@ -125,6 +125,11 @@ document.addEventListener('DOMContentLoaded', function() {
         RC-Coupling
       </button>
       
+      <button class="modality-filter" data-modality="EIT">
+        <span class="modality-dot" style="background: var(--color-EIT);"></span>
+        Electrical Impedance Tomography
+      </button>
+      
       <button class="modality-filter" data-modality="TOF">
         <span class="modality-dot" style="background: var(--color-TOF);"></span>
         Time-of-Flight
@@ -132,22 +137,102 @@ document.addEventListener('DOMContentLoaded', function() {
       
     </div>
     <div class="columns is-centered is-multiline" id="publications-grid">
-      <div class="column is-4 pub-column" data-modalities="RC">
+      <div class="column is-4 pub-column" data-modalities="SCPS">
+        <div class="pub-card-wrapper pub-card-wrapper-highlight">
+          
+          <div class="highlight-badge" style="color: var(--color-SCPS);">
+            <i class="fas fa-star"></i> Recently accepted conference paper
+          </div>
+          
+          <div class="paper-card paper-card-highlight" style="--card-color: var(--color-SCPS);">
+            <a href="/websites/icra2026/icra2026.html">
+            <img src="/imgs/cards/gtp_cover7_alpha.png" alt="GenTact-Prox: 3D-printed Capacitive Tactile and Proximity Sensors" class="paper-image" style="object-fit: contain;">
+            <div class="paper-content">
+              <div class="paper-title">GenTact-Prox: 3D-printed Capacitive Tactile and Proximity Sensors</div>
+              <div class="paper-venue">ICRA 2026</div>
+              <div class="modality-tags"><span class="modality-tag" style="--mod-color: var(--color-SCPS);">
+                      <span class="modality-dot-sm" style="background: var(--color-SCPS);"></span>
+                      Self-Capacitive
+                    </span></div>
+              <p class="paper-blurb">Extends GenTact with capacitive sensing for proximity detection (up to 18 cm) and contact anticipation.</p>
+              <div class="paper-cta">
+                Learn more <i class="fas fa-arrow-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        </div>
+      </div>
+      <div class="column is-4 pub-column" data-modalities="TOF, SCPS">
         <div class="pub-card-wrapper">
           
           <div class="highlight-badge-spacer"></div>
           
-          <div class="paper-card" style="--card-color: var(--color-RC);">
-            <a href="/websites/icra2025/icra2025.html">
-            <img src="/imgs/cards/gt_cover2_alpha.png" alt="GenTact Toolbox: A Computational Design Pipeline" class="paper-image" style="object-fit: contain;">
+          <div class="paper-card" style="--card-color: var(--color-TOF);">
+            <a href="https://arxiv.org/abs/2604.25563">
+            <img src="/imgs/cards/hybrid_cover.png" alt="Hybrid Capacitive and Time-of-Flight Sensing 3D-Printed Artificial Skin" class="paper-image" style="object-fit: contain; border-image: linear-gradient(to right, var(--color-TOF), var(--color-SCPS)) 1;">
             <div class="paper-content">
-              <div class="paper-title">GenTact Toolbox: A Computational Design Pipeline</div>
-              <div class="paper-venue">ICRA 2025</div>
-              <div class="modality-tags"><span class="modality-tag" style="--mod-color: var(--color-RC);">
-                      <span class="modality-dot-sm" style="background: var(--color-RC);"></span>
-                      RC-Coupling
+              <div class="paper-title">Hybrid Capacitive and Time-of-Flight Sensing 3D-Printed Artificial Skin</div>
+              <div class="paper-venue">ICRA Large-Area Tactile Sensing Workshop 2026</div>
+              <div class="modality-tags"><span class="modality-tag" style="--mod-color: var(--color-TOF);">
+                      <span class="modality-dot-sm" style="background: var(--color-TOF);"></span>
+                      Time-of-Flight
+                    </span><span class="modality-tag" style="--mod-color: var(--color-SCPS);">
+                      <span class="modality-dot-sm" style="background: var(--color-SCPS);"></span>
+                      Self-Capacitive
                     </span></div>
-              <p class="paper-blurb">A computational pipeline for creating versatile whole-body tactile skins through procedural mesh generation, task-driven simulation, and multi-material 3D printing.</p>
+              <p class="paper-blurb">Improving Sensing Coverage and Compliance of 3D-Printed Artificial Skins Through Multi-Modal Sensing and Soft Materials</p>
+              <div class="paper-cta">
+                Learn more <i class="fas fa-arrow-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        </div>
+      </div>
+      <div class="column is-4 pub-column" data-modalities="EIT">
+        <div class="pub-card-wrapper">
+          
+          <div class="highlight-badge-spacer"></div>
+          
+          <div class="paper-card" style="--card-color: var(--color-EIT);">
+            <a href="">
+            <img src="/imgs/cards/eit_cover.png" alt="EIT-based 3D-Printed Tactile Sensors" class="paper-image" style="object-fit: contain;">
+            <div class="paper-content">
+              <div class="paper-title">EIT-based 3D-Printed Tactile Sensors</div>
+              <div class="paper-venue">ICRA Large-Area Tactile Sensing Workshop 2026</div>
+              <div class="modality-tags"><span class="modality-tag" style="--mod-color: var(--color-EIT);">
+                      <span class="modality-dot-sm" style="background: var(--color-EIT);"></span>
+                      Electrical Impedance Tomography
+                    </span></div>
+              <p class="paper-blurb">Improving the sensing resolution of GenTact tactile sensors through electrical impedance tomography (EIT).</p>
+              <div class="paper-cta">
+                Learn more <i class="fas fa-arrow-right"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        </div>
+      </div>
+      <div class="column is-4 pub-column" data-modalities="TOF, SCPS">
+        <div class="pub-card-wrapper">
+          
+          <div class="highlight-badge-spacer"></div>
+          
+          <div class="paper-card" style="--card-color: var(--color-TOF);">
+            <a href="https://arxiv.org/abs/2604.25554">
+            <img src="/imgs/cards/bullet_time_cover.png" alt="Egocentric Tactile and Proximity Sensors as Observation Priors for Humanoid Collision Avoidance" class="paper-image" style="object-fit: contain; border-image: linear-gradient(to right, var(--color-TOF), var(--color-SCPS)) 1;">
+            <div class="paper-content">
+              <div class="paper-title">Egocentric Tactile and Proximity Sensors as Observation Priors for Humanoid Collision Avoidance</div>
+              <div class="paper-venue">RoboTact Workshop @ ICRA 2026</div>
+              <div class="modality-tags"><span class="modality-tag" style="--mod-color: var(--color-TOF);">
+                      <span class="modality-dot-sm" style="background: var(--color-TOF);"></span>
+                      Time-of-Flight
+                    </span><span class="modality-tag" style="--mod-color: var(--color-SCPS);">
+                      <span class="modality-dot-sm" style="background: var(--color-SCPS);"></span>
+                      Self-Capacitive
+                    </span></div>
+              <p class="paper-blurb">Uses simulated GenTact sensors to increase sample efficiency for training a collision avoidance policy for a humanoid robot.</p>
               <div class="paper-cta">
                 Learn more <i class="fas fa-arrow-right"></i>
               </div>
@@ -162,7 +247,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <div class="highlight-badge-spacer"></div>
           
           <div class="paper-card" style="--card-color: var(--color-TOF);">
-            <a href="https://hiro-group.ronc.one/papers/2025_Soukhovei_CR_workshop.pdf">
+            <a href="https://arxiv.org/abs/2603.23725">
             <img src="/imgs/cards/formfitting_cover.png" alt="Form-Fitting, Large-Area Sensor Mounting for Obstacle Detection" class="paper-image" style="object-fit: contain;">
             <div class="paper-content">
               <div class="paper-title">Form-Fitting, Large-Area Sensor Mounting for Obstacle Detection</div>
@@ -180,24 +265,22 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
         </div>
       </div>
-      <div class="column is-4 pub-column" data-modalities="SCPS">
-        <div class="pub-card-wrapper pub-card-wrapper-highlight">
+      <div class="column is-4 pub-column" data-modalities="RC">
+        <div class="pub-card-wrapper">
           
-          <div class="highlight-badge" style="color: var(--color-SCPS);">
-            <i class="fas fa-star"></i> Recently accepted to ICRA 2026
-          </div>
+          <div class="highlight-badge-spacer"></div>
           
-          <div class="paper-card paper-card-highlight" style="--card-color: var(--color-SCPS);">
-            <a href="/websites/icra2026/icra2026.html">
-            <img src="/imgs/cards/gtp_cover7_alpha.png" alt="GenTact-Prox: Tactile and Proximity Sensing" class="paper-image" style="object-fit: contain;">
+          <div class="paper-card" style="--card-color: var(--color-RC);">
+            <a href="/websites/icra2025/icra2025.html">
+            <img src="/imgs/cards/gt_cover2_alpha.png" alt="GenTact Toolbox: A Computational Design Pipeline" class="paper-image" style="object-fit: contain;">
             <div class="paper-content">
-              <div class="paper-title">GenTact-Prox: Tactile and Proximity Sensing</div>
-              <div class="paper-venue">ICRA 2026</div>
-              <div class="modality-tags"><span class="modality-tag" style="--mod-color: var(--color-SCPS);">
-                      <span class="modality-dot-sm" style="background: var(--color-SCPS);"></span>
-                      Self-Capacitive
+              <div class="paper-title">GenTact Toolbox: A Computational Design Pipeline</div>
+              <div class="paper-venue">ICRA 2025</div>
+              <div class="modality-tags"><span class="modality-tag" style="--mod-color: var(--color-RC);">
+                      <span class="modality-dot-sm" style="background: var(--color-RC);"></span>
+                      RC-Coupling
                     </span></div>
-              <p class="paper-blurb">Extends GenTact with capacitive sensing for proximity detection (up to 18 cm) and contact anticipation.</p>
+              <p class="paper-blurb">A computational pipeline for creating versatile whole-body tactile skins through procedural mesh generation, task-driven simulation, and multi-material 3D printing.</p>
               <div class="paper-cta">
                 Learn more <i class="fas fa-arrow-right"></i>
               </div>
