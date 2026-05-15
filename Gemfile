@@ -7,4 +7,5 @@ gem "liquid", "4.0.4"
 gem "webrick"
 gem "csv"
 gem "bigdecimal"
+gem "jekyll-sitemap"
 

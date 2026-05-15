@@ -1,0 +1,5 @@
+ - name: Template-0001
+   robot: Robot Name
+   description: Description of the skin
+   cover_image: assets/skins/Template/cover_image.png
+   last_updated: 2026-03-27
